@@ -28,7 +28,7 @@ A lightweight Tampermonkey script to reduce rendering overhead in long ChatGPT c
 | Mode        | Description |
 |------------|-------------|
 | **SAFE**      | Minimal changes. Only `content-visibility` and `contain: paint` applied. Safe for all users, stable performance boost. |
-| **AGGRESSIVE** | Removes animations, transitions, shadows, and SVG graphics. Visual fidelity mostly preserved. Suitable for medium-to-long chats. |
+| **AGGRESSIVE** | Removes animations, transitions, shadows, and SVG graphics. Visual fidelity mostly preserved (button may disappear but still clickable). Suitable for medium-to-long chats. |
 | **EXTREME**    | Maximal performance: hides images, videos, SVGs, and other heavy visual elements. Text-only display. Best for very long conversations (200+ messages). |
 
 ---
