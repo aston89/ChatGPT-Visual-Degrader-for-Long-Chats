@@ -11,14 +11,14 @@ A lightweight Tampermonkey script to reduce rendering overhead in long ChatGPT c
 - CSS-only: no manipulation of DOM structure or JavaScript logic.
 - Toggle at runtime via a fixed button.
 - Reduces CPU/GPU usage by minimizing unnecessary repaints and compositing.
-- Compatible with existing collapse/DOM-detach scripts for extreme long chats.
+- Compatible with existing [Detach](https://github.com/aston89/ChatGPT-Conservative-Anti-Freeze-for-Long-Chats) and [Collapse](https://github.com/aston89/ChatGPT-Ultra-Lightweight-Anti-Freeze-for-Long-Chats) scripts for extreme long chats.
 
 ---
 
 ## Installation
 
 1. Install **Tampermonkey** or a compatible userscript manager.
-2. Copy the script into a new Tampermonkey userscript.
+2. Copy [the script](https://github.com/aston89/ChatGPT-Visual-Degrader-for-Long-Chats/blob/main/chatgpr-visualdegrader.js) into a new Tampermonkey userscript.
 3. Save and refresh ChatGPT web page.
 
 ---
@@ -43,11 +43,11 @@ A lightweight Tampermonkey script to reduce rendering overhead in long ChatGPT c
 
 ---
 
-## Comparison with previous methods
+## Comparison with DOM methods
 
-- Older DOM-detach methods attempted to remove old turns from the DOM and restore them when scrolling. This approach often caused unexpected page behavior and full-core CPU usage spikes.
+- DOM methods attempted to remove old turns from by detaching or collapsing in order to reduce cpu hogging and memory usage.
 - **This script is purely visual**. It does not remove nodes or modify React state, avoiding side effects.
-- Works in tandem with collapse/DOM-detach scripts: visual degradation reduces painting costs while collapse scripts reduce DOM size.
+- Works in tandem with collapse/detach scripts: visual degradation reduces painting costs (gpu/cpu).
 
 ---
 
@@ -55,7 +55,7 @@ A lightweight Tampermonkey script to reduce rendering overhead in long ChatGPT c
 
 - CPU and memory usage are still influenced by the underlying ChatGPT page and JavaScript. This script minimizes repaint and visual processing but does not alter internal JS logic.
 - Works on ChatGPT web pages: `https://chat.openai.com/*` and `https://chatgpt.com/*`.
-- Tested with long conversations and software rendering (Mercury browser), significantly reducing memory footprint while preserving usability.
+- Tested with long conversations and software rendering, significantly reducing memory footprint while preserving usability.
 
 ---
 
