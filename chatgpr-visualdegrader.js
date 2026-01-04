@@ -13,7 +13,7 @@
   'use strict';
 
   const MODES = ['safe', 'aggressive', 'extreme'];
-  let currentMode = localStorage.getItem('chatgpt-visual-mode') || 'aggressive';
+  let currentMode = localStorage.getItem('chatgpt-visual-mode') || 'safe';
 
   const STYLE_ID = 'chatgpt-visual-degrader-style';
   const BTN_ID   = 'chatgpt-visual-degrader-btn';
